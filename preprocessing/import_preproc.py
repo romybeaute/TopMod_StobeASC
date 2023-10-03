@@ -22,6 +22,6 @@ df_clean = full_cleaning_pipeline(reports, 'reflection_answer')
 
 # Save the cleaned data
 base_name, ext = os.path.splitext(DATASET_NAME)
-new_path = f"{base_name}_preprocessed{ext}"
+new_path = f"{base_name}_{CONDITION}_preprocessed{ext}"
 preproc_path = os.path.join(PROJDIR, f'DATA/preprocessed/{new_path}')
 df_clean.to_csv(preproc_path, index=False)
